@@ -1,0 +1,245 @@
+openapi: 3.1.0
+info:
+  title: Google AdSense Management API
+  description: >-
+    The AdSense Management API allows publishers to access their inventory and
+    run earnings and performance reports. It provides programmatic access to ad
+    clients, ad units, custom channels, URL channels, payments, and reports.
+  version: v2
+  contact:
+    name: Google
+    url: https://developers.google.com/adsense/management
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+  - url: https://adsense.googleapis.com
+    description: AdSense Management API server
+paths:
+  /v2/accounts:
+    get:
+      summary: List accounts
+      description: Lists all accounts available to the caller.
+      operationId: listAccounts
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListAccountsResponse'
+  /v2/{parent}/adclients:
+    get:
+      summary: List ad clients
+      description: Lists all ad clients in the specified account.
+      operationId: listAdClients
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListAdClientsResponse'
+  /v2/{parent}/adunits:
+    get:
+      summary: List ad units
+      description: Lists all ad units under a specified ad client.
+      operationId: listAdUnits
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListAdUnitsResponse'
+  /v2/{account}/reports:generate:
+    get:
+      summary: Generate report
+      description: Generates an AdSense report based on the report request.
+      operationId: generateReport
+      parameters:
+        - name: account
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: dateRange
+          in: query
+          schema:
+            type: string
+        - name: metrics
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+        - name: dimensions
+          in: query
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReportResult'
+  /v2/{parent}/payments:
+    get:
+      summary: List payments
+      description: Lists all payments for the specified account.
+      operationId: listPayments
+      parameters:
+        - name: parent
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListPaymentsResponse'
+components:
+  schemas:
+    Account:
+      type: object
+      properties:
+        name:
+          type: string
+        displayName:
+          type: string
+        reportingTimeZone:
+          type: string
+        state:
+          type: string
+    ListAccountsResponse:
+      type: object
+      properties:
+        accounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+        nextPageToken:
+          type: string
+    AdClient:
+      type: object
+      properties:
+        name:
+          type: string
+        reportingDimensionId:
+          type: string
+        productCode:
+          type: string
+    ListAdClientsResponse:
+      type: object
+      properties:
+        adClients:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdClient'
+        nextPageToken:
+          type: string
+    AdUnit:
+      type: object
+      properties:
+        name:
+          type: string
+        reportingDimensionId:
+          type: string
+        displayName:
+          type: string
+        state:
+          type: string
+          enum:
+            - ACTIVE
+            - ARCHIVED
+    ListAdUnitsResponse:
+      type: object
+      properties:
+        adUnits:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdUnit'
+        nextPageToken:
+          type: string
+    ReportResult:
+      type: object
+      properties:
+        totalMatchedRows:
+          type: string
+        headers:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              type:
+                type: string
+        rows:
+          type: array
+          items:
+            type: object
+            properties:
+              cells:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    value:
+                      type: string
+    Payment:
+      type: object
+      properties:
+        name:
+          type: string
+        date:
+          type: string
+        amount:
+          type: string
+    ListPaymentsResponse:
+      type: object
+      properties:
+        payments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Payment'
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/adsense: View and manage AdSense data
+            https://www.googleapis.com/auth/adsense.readonly: View AdSense data
+security:
+  - oauth2:
+      - https://www.googleapis.com/auth/adsense

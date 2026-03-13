@@ -1,0 +1,73 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/api-evangelist/google-adsense/refs/heads/main/json-schema/json-schema.yml
+title: Google AdSense Management API Schema
+description: >-
+  JSON Schema for the Google AdSense Management API covering accounts,
+  ad clients, ad units, reports, and payments.
+type: object
+properties:
+  Account:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Resource name of the account.
+      displayName:
+        type: string
+        description: Human-readable name of the account.
+      reportingTimeZone:
+        type: string
+        description: Reporting timezone of the account.
+      state:
+        type: string
+        description: State of the account.
+        enum:
+          - READY
+          - NEEDS_ATTENTION
+          - GETTING_READY
+    required:
+      - name
+  AdClient:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Resource name of the ad client.
+      reportingDimensionId:
+        type: string
+        description: Reporting dimension ID.
+      productCode:
+        type: string
+        description: Product code of the ad client.
+    required:
+      - name
+  AdUnit:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Resource name of the ad unit.
+      displayName:
+        type: string
+        description: Display name of the ad unit.
+      state:
+        type: string
+        enum:
+          - ACTIVE
+          - ARCHIVED
+    required:
+      - name
+  Payment:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Resource name of the payment.
+      date:
+        type: string
+        description: Date of the payment.
+      amount:
+        type: string
+        description: Amount of the payment.
+    required:
+      - name

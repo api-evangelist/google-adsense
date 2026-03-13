@@ -1,0 +1,16 @@
+"@context":
+  "@vocab": https://schema.org/
+  adsense: https://developers.google.com/adsense/management/reference/rest/v2/
+  name: schema:name
+  description: schema:description
+  url: schema:url
+  displayName: adsense:displayName
+  reportingTimeZone: adsense:reportingTimeZone
+  productCode: adsense:productCode
+  adClient: adsense:adClient
+  adUnit: adsense:adUnit
+  state: adsense:state
+  amount: schema:amount
+  date: schema:date
+  metrics: adsense:metrics
+  dimensions: adsense:dimensions
