@@ -12,13 +12,13 @@ created: '2026-03-13'
 modified: '2026-03-16'
 specificationVersion: '0.19'
 tags:
-  - Advertising
-  - Publishers
   - Ad Units
-  - Revenue
-  - Reports
-  - Monetization
   - AdSense
+  - Advertising
+  - Monetization
+  - Publishers
+  - Reports
+  - Revenue
 apis:
   - aid: google-adsense:google-adsense
     name: Google AdSense Management API

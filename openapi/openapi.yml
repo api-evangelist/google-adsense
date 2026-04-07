@@ -37,6 +37,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListAccountsResponse'
+      tags:
+        - Accounts
   /v2/{parent}/adclients:
     get:
       summary: Google AdSense Management List ad clients
@@ -55,6 +57,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListAdClientsResponse'
+      tags:
+        - Adclients
   /v2/{parent}/adunits:
     get:
       summary: Google AdSense Management List ad units
@@ -73,6 +77,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListAdUnitsResponse'
+      tags:
+        - Adunits
   /v2/{account}/reports:generate:
     get:
       summary: Google AdSense Management Generate report
@@ -107,6 +113,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ReportResult'
+      tags:
+        - Reports:generate
   /v2/{parent}/payments:
     get:
       summary: Google AdSense Management List payments
@@ -125,6 +133,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListPaymentsResponse'
+      tags:
+        - Payments
 components:
   schemas:
     Account:
@@ -243,3 +253,9 @@ components:
 security:
   - oauth2:
       - https://www.googleapis.com/auth/adsense
+tags:
+  - name: Accounts
+  - name: Adclients
+  - name: Adunits
+  - name: Payments
+  - name: Reports:generate
