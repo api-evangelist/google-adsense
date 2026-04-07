@@ -18,7 +18,7 @@ servers:
 paths:
   /v2/accounts:
     get:
-      summary: List accounts
+      summary: Google AdSense Management List accounts
       description: Lists all accounts available to the caller.
       operationId: listAccounts
       parameters:
@@ -39,7 +39,7 @@ paths:
                 $ref: '#/components/schemas/ListAccountsResponse'
   /v2/{parent}/adclients:
     get:
-      summary: List ad clients
+      summary: Google AdSense Management List ad clients
       description: Lists all ad clients in the specified account.
       operationId: listAdClients
       parameters:
@@ -57,7 +57,7 @@ paths:
                 $ref: '#/components/schemas/ListAdClientsResponse'
   /v2/{parent}/adunits:
     get:
-      summary: List ad units
+      summary: Google AdSense Management List ad units
       description: Lists all ad units under a specified ad client.
       operationId: listAdUnits
       parameters:
@@ -75,7 +75,7 @@ paths:
                 $ref: '#/components/schemas/ListAdUnitsResponse'
   /v2/{account}/reports:generate:
     get:
-      summary: Generate report
+      summary: Google AdSense Management Generate report
       description: Generates an AdSense report based on the report request.
       operationId: generateReport
       parameters:
@@ -109,7 +109,7 @@ paths:
                 $ref: '#/components/schemas/ReportResult'
   /v2/{parent}/payments:
     get:
-      summary: List payments
+      summary: Google AdSense Management List payments
       description: Lists all payments for the specified account.
       operationId: listPayments
       parameters:
