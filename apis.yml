@@ -36,7 +36,7 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developers.google.com/adsense/management/getting_started
   - type: Pricing
     url: https://support.google.com/adsense/answer/180195
