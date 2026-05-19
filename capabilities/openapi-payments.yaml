@@ -1,0 +1,79 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google AdSense Management API — Payments
+  description: 'Google AdSense Management API — Payments. 1 operations. Lead operation: Google AdSense Management List payments.
+    Self-contained Naftiko capability covering one Google Adsense business surface.'
+  tags:
+  - Google Adsense
+  - Payments
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_ADSENSE_API_KEY: GOOGLE_ADSENSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-payments
+    baseUri: https://adsense.googleapis.com
+    description: Google AdSense Management API — Payments business capability. Self-contained, no shared references.
+    resources:
+    - name: v2-parent-payments
+      path: /v2/{parent}/payments
+      operations:
+      - name: listpayments
+        method: GET
+        description: Google AdSense Management List payments
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: parent
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_ADSENSE_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: openapi-payments-rest
+    port: 8080
+    description: REST adapter for Google AdSense Management API — Payments. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/v2/{parent}/payments
+      name: v2-parent-payments
+      description: REST surface for v2-parent-payments.
+      operations:
+      - method: GET
+        name: listpayments
+        description: Google AdSense Management List payments
+        call: openapi-payments.listpayments
+        with:
+          parent: rest.parent
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-payments-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google AdSense Management API — Payments. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: google-adsense-management-list-payments
+      description: Google AdSense Management List payments
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-payments.listpayments
+      with:
+        parent: tools.parent
+      outputParameters:
+      - type: object
+        mapping: $.

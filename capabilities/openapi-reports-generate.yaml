@@ -1,0 +1,94 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google AdSense Management API — Reports:generate
+  description: 'Google AdSense Management API — Reports:generate. 1 operations. Lead operation: Google AdSense Management
+    Generate report. Self-contained Naftiko capability covering one Google Adsense business surface.'
+  tags:
+  - Google Adsense
+  - Reports:generate
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_ADSENSE_API_KEY: GOOGLE_ADSENSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-reports-generate
+    baseUri: https://adsense.googleapis.com
+    description: Google AdSense Management API — Reports:generate business capability. Self-contained, no shared references.
+    resources:
+    - name: v2-account-reports:generate
+      path: /v2/{account}/reports:generate
+      operations:
+      - name: generatereport
+        method: GET
+        description: Google AdSense Management Generate report
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: account
+          in: path
+          type: string
+          required: true
+        - name: dateRange
+          in: query
+          type: string
+        - name: metrics
+          in: query
+          type: array
+        - name: dimensions
+          in: query
+          type: array
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_ADSENSE_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: openapi-reports-generate-rest
+    port: 8080
+    description: REST adapter for Google AdSense Management API — Reports:generate. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/v2/{account}/reports-generate
+      name: v2-account-reports-generate
+      description: REST surface for v2-account-reports:generate.
+      operations:
+      - method: GET
+        name: generatereport
+        description: Google AdSense Management Generate report
+        call: openapi-reports-generate.generatereport
+        with:
+          account: rest.account
+          dateRange: rest.dateRange
+          metrics: rest.metrics
+          dimensions: rest.dimensions
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-reports-generate-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google AdSense Management API — Reports:generate. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: google-adsense-management-generate-report
+      description: Google AdSense Management Generate report
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-reports-generate.generatereport
+      with:
+        account: tools.account
+        dateRange: tools.dateRange
+        metrics: tools.metrics
+        dimensions: tools.dimensions
+      outputParameters:
+      - type: object
+        mapping: $.
