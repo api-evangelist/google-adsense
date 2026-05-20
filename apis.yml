@@ -10,46 +10,48 @@ created: '2026-03-13'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 tags:
-- Ad Units
-- AdSense
-- Advertising
-- Monetization
-- Publishers
-- Reports
-- Revenue
+  - Ad Units
+  - AdSense
+  - Advertising
+  - Monetization
+  - Publishers
+  - Reports
+  - Revenue
 apis:
-- aid: google-adsense:google-adsense
-  name: Google AdSense Management API
-  description: The AdSense Management API enables publishers to programmatically manage their ad inventory, access earnings
-    reports, configure ad clients and units, and retrieve payment and policy information.
-  humanURL: https://developers.google.com/adsense/management
-  baseURL: https://adsense.googleapis.com
-  properties:
-  - type: OpenAPI
-    url: openapi/openapi.yml
-  - type: JSONSchema
-    url: json-schema/json-schema.yml
+  - aid: google-adsense:google-adsense
+    name: Google AdSense Management API
+    description: The AdSense Management API enables publishers to programmatically manage their ad inventory, access earnings
+      reports, configure ad clients and units, and retrieve payment and policy information.
+    humanURL: https://developers.google.com/adsense/management
+    baseURL: https://adsense.googleapis.com
+    properties:
+    - type: OpenAPI
+      url: openapi/openapi.yml
+    - type: JSONSchema
+      url: json-schema/json-schema.yml
+    - type: JSONLD
+      url: json-ld/json-ld.yml
+    - type: NaftikoCapability
+      url: capabilities/openapi-accounts.yaml
+    - type: NaftikoCapability
+      url: capabilities/openapi-adclients.yaml
+    - type: NaftikoCapability
+      url: capabilities/openapi-adunits.yaml
+    - type: NaftikoCapability
+      url: capabilities/openapi-payments.yaml
+    - type: NaftikoCapability
+      url: capabilities/openapi-reports-generate.yaml
+common:
+  - type: GitHubOrganization
+    url: https://github.com/googleads
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/google-adsense
+  - type: GettingStarted
+    url: https://developers.google.com/adsense/management/getting_started
+  - type: Pricing
+    url: https://support.google.com/adsense/answer/180195
   - type: JSONLD
     url: json-ld/json-ld.yml
-  - type: NaftikoCapability
-    url: capabilities/openapi-accounts.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-adclients.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-adunits.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-payments.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-reports-generate.yaml
-common:
-- type: LinkedIn
-  url: https://www.linkedin.com/company/google-adsense
-- type: GettingStarted
-  url: https://developers.google.com/adsense/management/getting_started
-- type: Pricing
-  url: https://support.google.com/adsense/answer/180195
-- type: JSONLD
-  url: json-ld/json-ld.yml
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
