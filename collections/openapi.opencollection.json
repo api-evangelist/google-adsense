@@ -1,0 +1,172 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google AdSense Management API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google AdSense Management List accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://adsense.googleapis.com/v2/accounts",
+            "params": [
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pageToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists all accounts available to the caller."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Adclients",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google AdSense Management List ad clients",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://adsense.googleapis.com/v2/:parent/adclients",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all ad clients in the specified account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Adunits",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google AdSense Management List ad units",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://adsense.googleapis.com/v2/:parent/adunits",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all ad units under a specified ad client."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reports:generate",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google AdSense Management Generate report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://adsense.googleapis.com/v2/:account/reports:generate",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "dateRange",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "metrics",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dimensions",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Generates an AdSense report based on the report request."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Payments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google AdSense Management List payments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://adsense.googleapis.com/v2/:parent/payments",
+            "params": [
+              {
+                "name": "parent",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all payments for the specified account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

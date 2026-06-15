@@ -1,0 +1,636 @@
+{
+  "item": [
+    {
+      "id": "c3386896-4320-4ba5-9709-c874621f775b",
+      "name": "Accounts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d8b4db90-748e-49fd-918d-38941404af3f",
+          "name": "Google AdSense Management List accounts",
+          "request": {
+            "name": "Google AdSense Management List accounts",
+            "description": {
+              "content": "Lists all accounts available to the caller.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "62cfd149-1558-497f-b51c-0c7935194479",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pageSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"accounts\": [\n    {\n      \"name\": \"string\",\n      \"displayName\": \"string\",\n      \"reportingTimeZone\": \"string\",\n      \"state\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"displayName\": \"string\",\n      \"reportingTimeZone\": \"string\",\n      \"state\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8afcbbc7-59af-46ef-a83e-a04f51a58b0e",
+      "name": "Adclients",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9dada59a-ebda-4ff1-be22-097d9a7c863b",
+          "name": "Google AdSense Management List ad clients",
+          "request": {
+            "name": "Google AdSense Management List ad clients",
+            "description": {
+              "content": "Lists all ad clients in the specified account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                ":parent",
+                "adclients"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3bbe3d56-ae9a-4c02-a836-2463dc60fdb0",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":parent",
+                    "adclients"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "parent",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"adClients\": [\n    {\n      \"name\": \"string\",\n      \"reportingDimensionId\": \"string\",\n      \"productCode\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"reportingDimensionId\": \"string\",\n      \"productCode\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "590e2efc-27c3-4b6c-b6f4-b220a5032f79",
+      "name": "Adunits",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "776278ad-c389-43de-8c6b-bf70e5e53718",
+          "name": "Google AdSense Management List ad units",
+          "request": {
+            "name": "Google AdSense Management List ad units",
+            "description": {
+              "content": "Lists all ad units under a specified ad client.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                ":parent",
+                "adunits"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f7fbffdf-c44b-45e2-afa7-a750d30a963e",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":parent",
+                    "adunits"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "parent",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"adUnits\": [\n    {\n      \"name\": \"string\",\n      \"reportingDimensionId\": \"string\",\n      \"displayName\": \"string\",\n      \"state\": \"ARCHIVED\"\n    },\n    {\n      \"name\": \"string\",\n      \"reportingDimensionId\": \"string\",\n      \"displayName\": \"string\",\n      \"state\": \"ARCHIVED\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "cd1b7170-af65-4210-a22f-e5bdba351bc4",
+      "name": "Payments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c1d6a945-a083-466b-a68f-45473587cb2d",
+          "name": "Google AdSense Management List payments",
+          "request": {
+            "name": "Google AdSense Management List payments",
+            "description": {
+              "content": "Lists all payments for the specified account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                ":parent",
+                "payments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "efcec1c4-1773-45d7-9762-5b741d06e65c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":parent",
+                    "payments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "parent",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"payments\": [\n    {\n      \"name\": \"string\",\n      \"date\": \"string\",\n      \"amount\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"date\": \"string\",\n      \"amount\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "db2837f4-a37f-46f0-86f6-4ae5d287d8e2",
+      "name": "Reports:generate",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e5991e63-f412-4830-ac5f-e1a9a22c235e",
+          "name": "Google AdSense Management Generate report",
+          "request": {
+            "name": "Google AdSense Management Generate report",
+            "description": {
+              "content": "Generates an AdSense report based on the report request.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                ":account",
+                "reports:generate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "dateRange",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "metrics",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "metrics",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dimensions",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dimensions",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "21695fd0-643e-4961-892a-c29539da1e18",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":account",
+                    "reports:generate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "dateRange",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "metrics",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "metrics",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dimensions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dimensions",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalMatchedRows\": \"string\",\n  \"headers\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"rows\": [\n    {\n      \"cells\": [\n        {\n          \"value\": \"string\"\n        },\n        {\n          \"value\": \"string\"\n        }\n      ]\n    },\n    {\n      \"cells\": [\n        {\n          \"value\": \"string\"\n        },\n        {\n          \"value\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://adsense.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/adsense https://www.googleapis.com/auth/adsense.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "720b7a1f-8af5-4dbb-b4b1-f44966923c7d",
+    "name": "Google AdSense Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The AdSense Management API allows publishers to access their inventory and run earnings and performance reports. It provides programmatic access to ad clients, ad units, custom channels, URL channels, payments, and reports.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}
