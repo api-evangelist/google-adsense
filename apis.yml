@@ -34,6 +34,8 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
+  - type: OAuthScopes
+    url: scopes/google-adsense-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/googleads
   - type: LinkedIn
