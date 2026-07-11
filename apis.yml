@@ -34,6 +34,12 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-adsense-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-adsense-domain-security.yml
+  - type: Authentication
+    url: authentication/google-adsense-authentication.yml
   - type: OAuthScopes
     url: scopes/google-adsense-scopes.yml
   - type: GitHubOrganization
