@@ -34,6 +34,8 @@ apis:
       - type: JSONLD
         url: json-ld/json-ld.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-adsense-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-adsense-vulnerability-disclosure.yml
   - type: DomainSecurity
