@@ -5,7 +5,20 @@ description: >-
   reports. Publishers can manage ad clients, ad units, custom channels, URL channels, and access payment and policy
   information programmatically.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-adsense.png
 url: https://raw.githubusercontent.com/api-evangelist/google-adsense/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -19,20 +32,77 @@ tags:
   - Reports
   - Revenue
 apis:
-  - aid: google-adsense:google-adsense
-    name: Google AdSense Management API
-    description: >-
-      The AdSense Management API enables publishers to programmatically manage their ad inventory, access earnings
-      reports, configure ad clients and units, and retrieve payment and policy information.
-    humanURL: https://developers.google.com/adsense/management
-    baseURL: https://adsense.googleapis.com
-    properties:
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: JSONSchema
-        url: json-schema/json-schema.yml
-      - type: JSONLD
-        url: json-ld/json-ld.yml
+- aid: google-adsense:google-adsense-accounts-api
+  name: Google AdSense Management Accounts API
+  description: The Accounts API from Google AdSense Management — 1 operation(s) for accounts.
+  humanURL: https://developers.google.com/adsense/management
+  baseURL: https://adsense.googleapis.com
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/google-adsense-accounts-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-adsense:google-adsense-adclients-api
+  name: Google AdSense Management Adclients API
+  description: The Adclients API from Google AdSense Management — 1 operation(s) for adclients.
+  humanURL: https://developers.google.com/adsense/management
+  baseURL: https://adsense.googleapis.com
+  tags:
+  - Adclients
+  properties:
+  - type: OpenAPI
+    url: openapi/google-adsense-adclients-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-adsense:google-adsense-adunits-api
+  name: Google AdSense Management Adunits API
+  description: The Adunits API from Google AdSense Management — 1 operation(s) for adunits.
+  humanURL: https://developers.google.com/adsense/management
+  baseURL: https://adsense.googleapis.com
+  tags:
+  - Adunits
+  properties:
+  - type: OpenAPI
+    url: openapi/google-adsense-adunits-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-adsense:google-adsense-payments-api
+  name: Google AdSense Management Payments API
+  description: The Payments API from Google AdSense Management — 1 operation(s) for payments.
+  humanURL: https://developers.google.com/adsense/management
+  baseURL: https://adsense.googleapis.com
+  tags:
+  - Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/google-adsense-payments-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-adsense:google-adsense-reports-generate-api
+  name: Google AdSense Management Reports:generate API
+  description: >-
+    The Reports:generate API from Google AdSense Management — 1 operation(s) for reports:generate.
+  humanURL: https://developers.google.com/adsense/management
+  baseURL: https://adsense.googleapis.com
+  tags:
+  - Reports:generate
+  properties:
+  - type: OpenAPI
+    url: openapi/google-adsense-reports-generate-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
 common:
   - type: AgenticAccess
     url: agentic-access/google-adsense-agentic-access.yml
