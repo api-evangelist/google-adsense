@@ -1,0 +1,22 @@
+{
+  "provider": "google-adsense",
+  "sources": [
+    "google-adsense-accounts-api-openapi.yml",
+    "google-adsense-adclients-api-openapi.yml",
+    "google-adsense-adunits-api-openapi.yml",
+    "google-adsense-payments-api-openapi.yml",
+    "google-adsense-reports-generate-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-adsense-accounts-api-openapi.yml",
+    "google-adsense-adclients-api-openapi.yml",
+    "google-adsense-adunits-api-openapi.yml",
+    "google-adsense-payments-api-openapi.yml",
+    "google-adsense-reports-generate-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
