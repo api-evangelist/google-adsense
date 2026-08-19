@@ -1,0 +1,151 @@
+{
+  "item": [
+    {
+      "id": "8e82c44d-99a9-4761-9dcb-34d1e2e95227",
+      "name": "Adunits",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9e68000e-53e1-462d-aea0-e9390356c7c4",
+          "name": "Google AdSense Management List ad units",
+          "request": {
+            "name": "Google AdSense Management List ad units",
+            "description": {
+              "content": "Lists all ad units under a specified ad client.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                ":parent",
+                "adunits"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "parent",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "96699125-6d67-46af-9e38-fe9757ebc698",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":parent",
+                    "adunits"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "parent",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"adUnits\": [\n    {\n      \"name\": \"string\",\n      \"reportingDimensionId\": \"string\",\n      \"displayName\": \"string\",\n      \"state\": \"ARCHIVED\"\n    },\n    {\n      \"name\": \"string\",\n      \"reportingDimensionId\": \"string\",\n      \"displayName\": \"string\",\n      \"state\": \"ARCHIVED\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://adsense.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/adsense https://www.googleapis.com/auth/adsense.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e9b98367-19cc-4bd8-bfef-221997221f98",
+    "name": "Google AdSense Management Accounts Adunits API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The AdSense Management API allows publishers to access their inventory and run earnings and performance reports. It provides programmatic access to ad clients, ad units, custom channels, URL channels, payments, and reports.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}

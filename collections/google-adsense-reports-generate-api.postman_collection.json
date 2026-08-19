@@ -1,0 +1,198 @@
+{
+  "item": [
+    {
+      "id": "c7aaf0f9-d3d7-4f67-b035-3ddf9ff18b89",
+      "name": "Reports:generate",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2c1fc9b5-2688-4b42-bc42-3989708cc926",
+          "name": "Google AdSense Management Generate report",
+          "request": {
+            "name": "Google AdSense Management Generate report",
+            "description": {
+              "content": "Generates an AdSense report based on the report request.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                ":account",
+                "reports:generate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "dateRange",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "metrics",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "metrics",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dimensions",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "dimensions",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "account",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7ea35cce-b310-4b62-a8fb-31016f9aad63",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    ":account",
+                    "reports:generate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "dateRange",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "metrics",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "metrics",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dimensions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dimensions",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "account",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalMatchedRows\": \"string\",\n  \"headers\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"rows\": [\n    {\n      \"cells\": [\n        {\n          \"value\": \"string\"\n        },\n        {\n          \"value\": \"string\"\n        }\n      ]\n    },\n    {\n      \"cells\": [\n        {\n          \"value\": \"string\"\n        },\n        {\n          \"value\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://adsense.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/adsense https://www.googleapis.com/auth/adsense.readonly"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "4b101912-8865-4116-8137-79a69447cd74",
+    "name": "Google AdSense Management Accounts Reports:generate API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The AdSense Management API allows publishers to access their inventory and run earnings and performance reports. It provides programmatic access to ad clients, ad units, custom channels, URL channels, payments, and reports.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}
