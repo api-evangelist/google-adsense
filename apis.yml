@@ -80,7 +80,7 @@ apis:
   humanURL: https://developers.google.com/adsense/management
   baseURL: https://adsense.googleapis.com
   tags:
-  - Ad Units
+  - Adunits
   tags_raw:
   - Adunits
   properties:
