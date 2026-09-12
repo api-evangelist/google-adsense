@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Google AdSense Management Accounts API
   description: The AdSense Management API allows publishers to access their inventory and run earnings and performance reports. It provides programmatic access to ad clients, ad units, custom channels, URL channels, payments, and reports.
@@ -43,6 +43,15 @@ paths:
       - Accounts
 components:
   schemas:
+    ListAccountsResponse:
+      type: object
+      properties:
+        accounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+        nextPageToken:
+          type: string
     Account:
       type: object
       properties:
@@ -53,15 +62,6 @@ components:
         reportingTimeZone:
           type: string
         state:
-          type: string
-    ListAccountsResponse:
-      type: object
-      properties:
-        accounts:
-          type: array
-          items:
-            $ref: '#/components/schemas/Account'
-        nextPageToken:
           type: string
   securitySchemes:
     oauth2:

@@ -17,6 +17,13 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "google-adsense-accounts-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-adsense-adclients-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-adsense-adunits-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-adsense-payments-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-adsense-reports-generate-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }

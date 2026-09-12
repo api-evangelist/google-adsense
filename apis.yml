@@ -120,6 +120,8 @@ apis:
   - type: JSONLD
     url: json-ld/json-ld.yml
 common:
+  - type: Website
+    url: https://www.google.com/
   - type: AgenticAccess
     url: agentic-access/google-adsense-agentic-access.yml
   - type: VulnerabilityDisclosure
@@ -143,3 +145,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: google
+x-relationship: product
