@@ -74,22 +74,6 @@ apis:
     url: json-schema/json-schema.yml
   - type: JSONLD
     url: json-ld/json-ld.yml
-- aid: google-adsense:google-adsense-adunits-api
-  name: Google AdSense Management Adunits API
-  description: The Adunits API from Google AdSense Management — 1 operation(s) for adunits.
-  humanURL: https://developers.google.com/adsense/management
-  baseURL: https://adsense.googleapis.com
-  tags:
-  - Ad Units
-  tags_raw:
-  - Adunits
-  properties:
-  - type: OpenAPI
-    url: openapi/google-adsense-adunits-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/json-schema.yml
-  - type: JSONLD
-    url: json-ld/json-ld.yml
 - aid: google-adsense:google-adsense-payments-api
   name: Google AdSense Management Payments API
   description: The Payments API from Google AdSense Management — 1 operation(s) for payments.
@@ -115,6 +99,20 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-adsense-reports-generate-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/json-schema.yml
+  - type: JSONLD
+    url: json-ld/json-ld.yml
+- aid: google-adsense:google-adsense-ad-units-api
+  name: Google AdSense Management Ad Units API
+  description: The Ad Units API from Google AdSense Management — 1 operation(s) for ad units.
+  humanURL: https://developers.google.com/adsense/management
+  baseURL: https://adsense.googleapis.com
+  tags:
+  - Ad Units
+  properties:
+  - type: OpenAPI
+    url: openapi/google-adsense-ad-units-api-openapi.yml
   - type: JSONSchema
     url: json-schema/json-schema.yml
   - type: JSONLD
