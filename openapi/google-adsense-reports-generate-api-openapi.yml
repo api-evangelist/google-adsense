@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google AdSense Management Accounts Reports:generate API
+  title: Google AdSense Management Reports:generate API
   description: The AdSense Management API allows publishers to access their inventory and run earnings and performance reports. It provides programmatic access to ad clients, ad units, custom channels, URL channels, payments, and reports.
   version: v2
   contact:

@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google AdSense Management Accounts Adunits API
+  title: Google AdSense Management Adunits API
   description: The AdSense Management API allows publishers to access their inventory and run earnings and performance reports. It provides programmatic access to ad clients, ad units, custom channels, URL channels, payments, and reports.
   version: v2
   contact:
@@ -16,7 +16,7 @@ security:
 - oauth2:
   - https://www.googleapis.com/auth/adsense
 tags:
-- name: Adunits
+- name: Ad Units
 paths:
   /v2/{parent}/adunits:
     get:
@@ -37,18 +37,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/ListAdUnitsResponse'
       tags:
-      - Adunits
+      - Ad Units
 components:
   schemas:
-    ListAdUnitsResponse:
-      type: object
-      properties:
-        adUnits:
-          type: array
-          items:
-            $ref: '#/components/schemas/AdUnit'
-        nextPageToken:
-          type: string
     AdUnit:
       type: object
       properties:
@@ -63,6 +54,15 @@ components:
           enum:
           - ACTIVE
           - ARCHIVED
+    ListAdUnitsResponse:
+      type: object
+      properties:
+        adUnits:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdUnit'
+        nextPageToken:
+          type: string
   securitySchemes:
     oauth2:
       type: oauth2
