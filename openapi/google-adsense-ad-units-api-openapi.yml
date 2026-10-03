@@ -40,15 +40,6 @@ paths:
       - Ad Units
 components:
   schemas:
-    ListAdUnitsResponse:
-      type: object
-      properties:
-        adUnits:
-          type: array
-          items:
-            $ref: '#/components/schemas/AdUnit'
-        nextPageToken:
-          type: string
     AdUnit:
       type: object
       properties:
@@ -63,6 +54,15 @@ components:
           enum:
           - ACTIVE
           - ARCHIVED
+    ListAdUnitsResponse:
+      type: object
+      properties:
+        adUnits:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdUnit'
+        nextPageToken:
+          type: string
   securitySchemes:
     oauth2:
       type: oauth2
