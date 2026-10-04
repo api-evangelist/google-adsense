@@ -40,6 +40,13 @@ paths:
       - Payments
 components:
   schemas:
+    ListPaymentsResponse:
+      type: object
+      properties:
+        payments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Payment'
     Payment:
       type: object
       properties:
@@ -49,13 +56,6 @@ components:
           type: string
         amount:
           type: string
-    ListPaymentsResponse:
-      type: object
-      properties:
-        payments:
-          type: array
-          items:
-            $ref: '#/components/schemas/Payment'
   securitySchemes:
     oauth2:
       type: oauth2
