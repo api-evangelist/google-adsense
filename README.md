@@ -1,4 +1,4 @@
-# Google AdSense Management (google-adsense)
+# Google AdSense Management
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,53 +66,137 @@
 
 The Google AdSense Management API allows publishers to access their inventory and run earnings and performance reports. Publishers can manage ad clients, ad units, custom channels, URL channels, and access payment and policy information programmatically.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-adsense/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-adsense/refs/heads/main/apis.yml)
+**Areas:** Ad Units · AdSense · Advertising · Monetization · Publishers · Reports · Revenue
 
-## Scope
+## Google AdSense Management on APIs.io
 
-- **Type:** Index
+Everything profiled for Google AdSense Management is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-adsense/](https://apis.io/providers/google-adsense/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Ad Units
-- AdSense
-- Advertising
-- Monetization
-- Publishers
-- Reports
-- Revenue
+- [Google AdSense Management Accounts API](https://apis.io/apis/google-adsense/google-adsense-accounts-api/) — The Accounts API from Google AdSense Management — 1 operation(s) for accounts.
+- [Google AdSense Management Adclients API](https://apis.io/apis/google-adsense/google-adsense-adclients-api/) — The Adclients API from Google AdSense Management — 1 operation(s) for adclients.
+- [Google AdSense Management Payments API](https://apis.io/apis/google-adsense/google-adsense-payments-api/) — The Payments API from Google AdSense Management — 1 operation(s) for payments.
+- [Google AdSense Management Reports:generate API](https://apis.io/apis/google-adsense/google-adsense-reports-generate-api/) — The Reports:generate API from Google AdSense Management — 1 operation(s) for reports:generate.
+- [Google AdSense Management Ad Units API](https://apis.io/apis/google-adsense/google-adsense-ad-units-api/) — The Ad Units API from Google AdSense Management — 1 operation(s) for ad units.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google AdSense Management API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The AdSense Management API enables publishers to programmatically manage their ad inventory, access earnings reports, configure ad clients and units, and retrieve payment and policy information.
+- [Google Adsense Agentic Access](https://apis.io/agentic-access/google-adsense/google-adsense-agentic-access/)
 
-- **Human URL:** [https://developers.google.com/adsense/management](https://developers.google.com/adsense/management)
-- **Base URL:** `https://adsense.googleapis.com`
+#### Collections (6)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/json-schema.yml) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/json-ld.yml) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Google AdSense Management Accounts API](https://apis.io/collections/google-adsense/open-google-adsense-accounts-api/)
+- [Google AdSense Management Accounts Adclients API](https://apis.io/collections/google-adsense/open-google-adsense-adclients-api/)
+- [Google AdSense Management Accounts Adunits API](https://apis.io/collections/google-adsense/open-google-adsense-adunits-api/)
+- [Google AdSense Management Accounts Payments API](https://apis.io/collections/google-adsense/open-google-adsense-payments-api/)
+- [Google AdSense Management Accounts Reports:generate API](https://apis.io/collections/google-adsense/open-google-adsense-reports-generate-api/)
+- [Google AdSense Management API](https://apis.io/collections/google-adsense/open-openapi/)
 
-## Common Properties
+#### Governance rules (1)
 
-- [GitHub Organization](https://github.com/googleads)
-- [LinkedIn](https://www.linkedin.com/company/google-adsense)
-- [Getting Started](https://developers.google.com/adsense/management/getting_started)
+Spectral rulesets for the provider's contracts.
+
+- [Google AdSense Management — jsonschema rules](https://apis.io/rules/google-adsense/google-adsense-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Adsense Authentication](https://apis.io/security/google-adsense/google-adsense-authentication/)
+- [Google Adsense Domain Security](https://apis.io/security/google-adsense/google-adsense-domain-security/)
+- [Google Adsense Vulnerability Disclosure](https://apis.io/security/google-adsense/google-adsense-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Adsense Scopes](https://apis.io/scopes/google-adsense/google-adsense-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Adsense Plans Pricing](https://apis.io/plans/google-adsense/google-adsense-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Adsense Rate Limits](https://apis.io/rate-limits/google-adsense/google-adsense-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Adsense Finops](https://apis.io/finops/google-adsense/google-adsense-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
+- [Getting started](https://developers.google.com/adsense/management/getting_started)
 - [Pricing](https://support.google.com/adsense/answer/180195)
-- [JSON-LD](json-ld/json-ld.yml) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [GitHub](https://github.com/googleads)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 30.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 52.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 7.9 |
+
+**Agent readiness 26.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-adsense/](https://apis.io/providers/google-adsense/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google AdSense Management: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-adsense/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
